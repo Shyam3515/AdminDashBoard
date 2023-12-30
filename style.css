@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:ital,wght@0,300;0,600;1,500&family=Raleway:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    outline: none;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+};
+
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #f6f6f6;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color:#363949;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.2rem;
+    grid-template-columns: 12rem auto 19rem;
+}
+a{
+    color:#363949;
+}
+
+img{
+    display: block;
+    width:100%;
+}
+
+h1{
+    font-weight: 800;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+
+h5{
+    font-size: 0.7rem;
+}
+
+small{
+    font-size: 0.77rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color:#7d8da1;
+}
+
+p{
+    color:#677483;
+}
+
+b{
+    color:#363949;
+}
+
+.primary{
+    color:#7380ec;
+}
+.danger{
+    color:#ff7782;
+}
+.success{
+    color:#41f1b6;
+}
+.warning{
+    color:#ffbb55;
+}
+.primary{
+    color:#7380ec;
+}
+
+/* Aside */
+aside{
+    height: 100vh;
+    position: sticky;
+    top:0;
+    height:max-content;
+}
+
+aside .top{
+    /* background:white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo{
+    display: flex;
+    gap:0.8rem;
+}
+
+aside .logo img{
+    width: 2rem;
+    height: 2rem;
+}
+aside .close{
+    display: none;
+}
+
+/* Sidebar */
+aside .sidebar{
+    display: flex;
+    flex-direction: column;
+    height:86vh;
+    position: relative;
+    margin-top: 1.6rem;
+   
+};
+aside h3{
+    font-weight: bold;
+}
+aside .sidebar a{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    margin-left: 2rem;
+    color:#7d8da1;
+    position: relative;
+    height: 3rem;
+}
+
+aside .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 0;
+}
+/* when class is inside 'any' tag, we use tag.active*/
+aside .sidebar a.active{
+    background-color:rgba(132,139,200,0.18);
+    color:#7380ec;
+    margin-left: 0;
+    padding-left: 2rem;
+};
+aside a.active:before {
+    content: "";
+    width: 6px;
+    height:100%;
+    background: #7380ec;
+}
+aside .sidebar a:hover{
+    color:#7380ec;
+}
+aside .sidebar a:hover span{
+    margin-left: 0.9rem;
+}
+aside .sidebar span.message-count{
+    font-size: 11px;
+    background-color: #ff7782;
+    color:white;
+    padding: 2px 8px;
+    border-radius: 0.4rem;
+}
+
+/* Main */
+main{
+    /* margin-top: 1.4rem; */
+    /* display: inline; */
+}
+
+main .fix{
+    background:#f6f6f6;
+    position: sticky;
+    top:0;
+    padding: 16px 8px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+main .date{
+    display: inline-block;
+    background-color:rgba(132,139,200,0.18);
+    border-radius: 0.4rem;
+    margin-top: 0.8rem;
+    padding: 0.5rem 1.4rem;
+    box-shadow: 0 2rem 3rem rgba(132,139,200,0.2);
+};
+
+main .date{
+    display: inline;
+}
+
+main .date input[type="date"]{
+    background: transparent;
+    color:#363949;
+    font-size: 1rem;
+    cursor: pointer;
+};
+
+.insights{
+    display: inline;
+}
+main .insights{
+    display: flex;
+    flex:1;
+    align-items: center;
+    justify-content: space-between;
+    gap:12px;
+};
+div{
+    display: inline;
+}
+main .insights .stats{
+    background-color:#fff;
+    padding: 1rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    /* box-shadow: 0 2rem 3rem rgba(132,139,200,0.18); */
+    cursor: pointer;
+    transition:all 300ms ease;
+}
+/* main .insights .stats:hover{
+    box-shadow:none;
+} */
+
+main .insights .stats span{
+    background-color: #7380ec;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color:white;
+    font-size: 1.8rem;
+}
+main .insights .expenses span{
+    background-color: #ff7782;
+}
+main .insights .income span{
+    background-color: #41f1b6;
+}
+
+/* middle */
+main .insights .stats .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+main .insights .stats .middle .left{
+    width:max-content;
+}
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+}
+main .insights .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+}
+
+main .insights .sales svg circle{
+    stroke-dashoffset: -30;
+    stroke-dasharray: 200;
+}
+main .insights .expenses svg circle{
+    stroke-dashoffset: 12;
+    stroke-dasharray: 80;
+}
+main .insights svg circle{
+    fill:none;
+    stroke: #7380ec;
+    stroke-width: 14px;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: -30;
+};
+main .insights .income svg circle{
+    stroke-dashoffset: 35;
+    stroke-dasharray: 110;
+}
+main .insights .progress .number{
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Recent Orders */
+main .recent-orders{
+    margin: 1.8rem;
+}
+
+main .recent-orders h2{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color:#7d8da1;
+}
+main .recent-orders table{
+    background-color: #fff;
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1.8rem;
+    text-align: center;
+    box-shadow: 0 2rem 3rem rgba(132,139,200,0.18);
+}
+main table tbody td{
+    height:2.8rem;
+    border-bottom: 1px solid rgba(132,139,200,0.18);
+    color:#677483;
+}
+
+main table tbody tr{
+   border-bottom:none;
+};
+
+/* to come out from overriding */
+main a{
+    display: inline;
+}
+
+main .recent-orders a{
+    text-align: center;
+    display: block;
+    margin: 1rem;
+    color: #7380ec;
+}
+
+/* Right Section */
+.container .right{
+    width:100%;
+    background:#f6f6f6;
+    height: 100vh;
+    position: sticky;
+    padding: 0px 28px 16px 16px;
+    top:0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.right .top{
+    display: inline;
+}
+.right .top{
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    background:#f6f6f6;
+    padding: 16px 10px 20px;
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+
+.right::-webkit-scrollbar{
+    display: none;
+}
+
+.right .top button{
+    display: none;
+}
+
+.right .theme-toggler{
+    background-color: #727c87;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height:1.6rem;
+    width:4.2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    transition: all 300ms ease;
+}
+.light{
+   
+}
+
+.right .theme-toggler span{
+    font-size: 1.2rem;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+.right .theme-toggler span.active{
+    background-color: #7380ec;
+    border-radius: 1rem;
+    color:white;
+}
+
+.right .top .profile{
+    display: flex;
+    gap:8px;
+    text-align: right;
+}
+
+/* Recent Updates */
+
+.right .recent-updates h2{
+    margin-bottom: 0.8rem;
+}
+.right .recent-updates .updates{
+    background-color: white;
+    padding: 0.8rem;
+    border-radius: 2rem;
+}
+
+.right .recent-updates .updates .update{
+    display: grid;
+    grid-template-columns: 2.4rem auto;
+    gap:0.8rem;
+    margin-bottom: 1rem;
+};
+
+.right .recent-updates .updates .update p{
+    display: inline;
+}
+
+.right .recent-updates .updates .update{
+    font-size: 12px;
+}
+
+/* Sales Analytics */
+.right .sales-analytics{
+    margin-top: 1.8rem;
+}
+.right .sales-analytics h2{
+    margin-bottom: 0.8rem;
+}
+.right .sales-analytics .item{
+   background-color: white;
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   margin-bottom: 0.7rem;
+   padding: 1rem;
+   border-radius:1.2rem;
+   cursor: pointer;
+}
+.right .sales-analytics .item .right-side{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width:100%;
+}
+.right .sales-analytics .item .icon{
+    padding: 0.6rem;
+    color:white;
+    background-color: #7380ec;
+    border-radius: 50%;
+    display: flex;
+}
+.right .sales-analytics .item.offline .icon{
+    background-color: #ff7782;
+}
+.right .sales-analytics .item.customers .icon{
+    background-color: #41f1b6;
+}
+
+.right .sales-analytics .add-product{
+    background-color: transparent;
+    border: 2px dashed #7380ec;
+    color:#7380ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+};
+.right .sales-analytics .add-product:hover{
+    background-color: #8e97e3;
+}
+
+.theme{
+    background-color: #181a1e;
+    /* color: white; */
+}
+
+/* Media queries */
+@media screen and (max-width:1200px){
+    .container{
+        width:94%;
+        grid-template-columns: 7rem auto 18rem;
+    }
+
+    aside .logo h2{
+        display:none;
+    }
+
+    aside .sidebar h3{
+        display: none;
+    }
+
+    aside .sidebar a{
+        width: 5.2rem;
+        margin-left: 1.7rem;
+    }
+
+    aside .sidebar a.active{
+        padding-left: 1.7rem;
+    }
+
+    aside .sidebar a.messages{
+        gap:2px;
+        justify-content: start;
+    }
+
+    aside .sidebar a:last-child{
+        bottom: 1.5rem;
+    }
+
+    main .insights{
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        gap:0px;
+    }
+
+    main .insights .stats{
+        padding: 2rem;
+    }
+
+    main .recent-orders {
+        margin-top: 1.8rem;
+    }
+
+    main table thead tr th:first-child,
+    main table tbody tr td:first-child,
+    main table tbody tr td:last-child{
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px){
+    .container{
+        width:100%;
+        grid-template-columns: 1fr;
+    }
+    aside{
+        position: fixed;
+        background-color: white;
+        left: -110px;
+        width: 16rem;
+        z-index: 30;
+        height: 100%;
+        padding-right: 1.8rem;
+        display:none;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    @keyframes showMenu {
+        to {
+            left:0;
+        }
+    }
+    aside .logo{
+        margin-left: 1.5rem;
+    }
+
+    aside .logo h2,aside .sidebar h3{
+        display:inline;
+    };
+
+    aside .sidebar a{
+        width:100%;
+        height: 3.4rem;
+    }
+
+    aside .sidebar a.active{
+        width: 100%;
+    }
+
+    aside .sidebar a.messages{
+        gap:20px;
+    }
+    aside .sidebar a:last-child{
+        bottom: 0.1rem;
+    }
+
+    aside .close{
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    main{
+        position: relative;
+        margin-top: 5rem;
+        padding: 0 1rem;
+        z-index: 0;
+    }
+    main .recent-orders {
+        position: relative;
+        margin: 2rem 0 0 0;
+        width: 100%;
+    }
+
+    main table{
+        width: 100%;
+        margin: 0;
+    }
+
+    main .fix{
+        background:#f6f6f6;
+        position: relative;
+        z-index: 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .container .right{
+        width: 94%;
+        margin:0 auto 4rem;
+        z-index: 0;
+        position: relative;
+       height:max-content
+    }
+    .right .top{
+        position:fixed;
+        top:0;
+        left:0;
+        align-items: center;
+        padding: 0 0.8rem;
+        width:100%;
+        height: 4.6rem;
+        background-color: white;
+        z-index:99;
+        margin: 0;
+        box-shadow: 0 1rem 1rem rgba(132,139,200,0.18);;
+    }
+/* 
+    .right .top .theme-toggler{
+        width:4.4rem;
+        position: absolute;
+        left:66%
+    } */
+
+    .right .top button{
+        display: inline-block;
+        background-color: transparent;
+        color:black;
+        cursor: pointer;
+    }
+
+    .right .recent-updates h2{
+        margin-bottom: 0.8rem;
+    }
+    .right .recent-updates .updates .update{
+        gap:1.8rem;
+        font-size: 15px;
+    };
+
+}
